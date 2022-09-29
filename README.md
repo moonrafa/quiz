@@ -1,12 +1,11 @@
-# Lyrics Quiz
-
-- Who sings this song?
+# Film Quiz
 
 ## Tools
 
 - ReactJS
 - Typescript
 - Styled Components
+- OpenTriviaDB API
 
 ## Demo
 
