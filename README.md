@@ -9,7 +9,7 @@
 
 ## Demo
 
-<img src="" alt="screenshot of the quiz">
+<img src="src/assets/Quiz.png" alt="screenshot of the quiz">
 
 ## Author
 

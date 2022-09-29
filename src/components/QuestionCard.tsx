@@ -1,28 +1,33 @@
+import { AnswerObject } from "./StartGame";
+import {Wrapper, ButtonWrapper} from './QuestionCardStyle'
+
 type Props = {
-  question: string
-  answers: string[]
-  callback: any
-  userAnswer: any
-  currentQuestion: number
-  totalQuestions: number
+  question: string;
+  answers: string[];
+  callback: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  userAnswer: AnswerObject | undefined;
+  currentQuestion: number;
+  totalQuestions: number;
 }
 const QuestionCard: React.FC<Props> = ({question, answers, callback, userAnswer, currentQuestion, totalQuestions}) => {
   return (
-    <div className="question-card">
+    <Wrapper>
       <p className="number">
-        Question: {currentQuestion} out of {totalQuestions}
+        Question {currentQuestion} out of {totalQuestions}
       </p>
       <h4 dangerouslySetInnerHTML={{__html: question}}></h4>
       <div className="answers">
       {answers.map(answer => (
-        <div className="answer">
-          <button disabled={userAnswer} onClick={callback}>
+        <ButtonWrapper correct={userAnswer?.correctAnswer === answer}
+        userClicked={userAnswer?.answer === answer}
+         key={answer} className="answer">
+          <button disabled={userAnswer ? true : false} value={answer} onClick={callback}>
             <span dangerouslySetInnerHTML={{__html: answer}}></span>
           </button>
-        </div>
+        </ButtonWrapper>
       ))}
       </div>
-    </div>
+    </Wrapper>
   )
 }
 export default QuestionCard
