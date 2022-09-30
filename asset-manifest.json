@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/quiz/static/js/main.9cff70f0.js",
+    "static/media/bg.png": "/quiz/static/media/bg.cc1273af450504afe755.png",
+    "static/media/gif.gif": "/quiz/static/media/gif.1dfc6d0fd8b39bd46733.gif",
+    "index.html": "/quiz/index.html",
+    "main.9cff70f0.js.map": "/quiz/static/js/main.9cff70f0.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.9cff70f0.js"
+  ]
+}
