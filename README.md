@@ -1,4 +1,4 @@
-# Film Quiz
+# Computer Science Quiz
 
 ## Tools
 
@@ -9,7 +9,13 @@
 
 ## Demo
 
-<img src="src/assets/Quiz.png" alt="screenshot of the quiz">
+- mobile
+
+  <img src="src/assets/Quiz.png" alt="screenshot of the quiz">
+
+- desktop
+
+  <img src="src/assets/Quiz-Desktop.png">
 
 ## Author
 

@@ -12,6 +12,7 @@ padding: 1rem;
 
 p {
   font-size: 1rem;
+  font-weight: 700;
 }
 
 `

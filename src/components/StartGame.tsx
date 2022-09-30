@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { fetchQuizQuestions, Difficulty, QuestionState } from '../API'
 import QuestionCard from './QuestionCard';
 import { Wrapper } from '../AppStyle';
+import loadingGif from    '../assets/gif.gif'
 export type AnswerObject = {
   question: string;
   answer: string;
@@ -58,15 +59,13 @@ const StartGame = () => {
   }
   return (
     <Wrapper>
-      <h1 className="title">FILM QUIZ</h1>
+      <h1 className="title">QUIZ</h1>
     {gameOver || userAnswers.length === TOTAL_QUESTIONS ? (<button className="start" onClick={startQuiz}>
       Start Quiz
     </button>): null} 
    {!gameOver ?  ( <p className="score">Score: {score} </p>) : null}
 
-    {/* {loading && ( <img src={loadingGif} alt=""/>)} */}
-    {loading && (<p>loading...</p>)}
-    
+     {loading && ( <img src={loadingGif} alt=""/>)}  
     {!loading &&  !gameOver && ( <QuestionCard currentQuestion={number + 1} totalQuestions={TOTAL_QUESTIONS} question={questions[number].question}
       answers={questions[number].answers}
       userAnswer={userAnswers ? userAnswers[number]: undefined} callback={checkAnswer} />)} 
